@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Michroma&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Michroma", sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.none {
+    display: none !important;
+}
+
+/* ---------------заголовок---------- */
+.header {
+    position: relative;
+
+    text-shadow: 0px 0px 9px blanchedalmond;
+
+    display: flex;
+    flex-direction: column;
+    /* по основной оси  flex-direction: column; по оси игрик(колонка)*/
+    justify-content: center;
+    /* по оси Х - в данном случае */
+    align-items: center;
+
+    /* background-color: #556983; */
+    width: 100%;
+    /* view height по всей странице */
+    height: 100vh;
+    /* !!!!! */
+    /* background-image: url(/Project/img/COVERR.jpg); */
+    /* имба свойство!!!! */
+    background-size: cover;
+    background-position: center;
+}
+
+.header-title {
+    margin: 0 0 25px 0;
+
+    color: #fff;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 5px;
+    word-spacing: -7px;
+}
+.header-subtitle {
+    margin: 0;
+
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}
+
+.header-arrow {
+    position: absolute;
+
+    bottom: 30px;
+    width: 48px;
+    height: 48px;
+}
+
+/* ---portfolio-------- */
+
+.portfolio {
+    padding-top: 80px;
+    padding-bottom: 115px;
+}
+.portfolio img {
+    max-width: 100%;
+}
+
+.portfolio-header {
+    margin: 0;
+    margin-bottom: 70px;
+    color: #000000;
+    text-align: center;
+    font-size: 46px;
+    line-height: 1.3;
+}
+
+/* ---------------------- */
+
+.portfolio-header {
+    font-size: 46px;
+    line-height: 50px;
+    font-weight: bold;
+    position: relative;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
+}
+.portfolio-header:before {
+    content: "";
+    position: absolute;
+    filter: blur(7px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-image: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 1em,
+            #00000067 1em,
+            #000000 50%
+        ),
+        repeating-linear-gradient(
+            45deg,
+            #000000,
+            #000000 1em,
+            #fff 1em,
+            #bfe2ff 50%
+        );
+    background-size: 3em 3em, 2em 2em;
+    animation-name: ani;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes ani {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+/* ---------------------------- */
+
+.portfolio-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    width: calc(50% - 15px);
+    background-color: white;
+    box-shadow: 0px 10px 40px 0px rgba(126, 155, 189, 0.35);
+}
+
+.card:hover {
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    transform: translateY(-20px);
+    transition: all 400ms;
+    box-shadow: 0px 20px 30px rgba(126, 155, 189, 0.6);
+}
+
+.card-link {
+    transition: color 200ms ease-in;
+
+    padding: 20px;
+
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+.card-link:hover {
+    color: rgb(39, 91, 236);
+}
+
+.card:last-child,
+.card:nth-last-child(2) {
+    margin-bottom: 0;
+}
+
+.card-img {
+    margin-bottom: 20px;
+}
+.card-title {
+    margin: 0;
+    margin-bottom: 13px;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.card p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 130%;
+}
+
+/*====================== footer------------------ */
+
+.footer {
+    color: white;
+    padding-top: 45px;
+    padding-bottom: 130px;
+    background: #1e4776;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row; /*  по умолчанию*/
+    justify-content: space-between;
+}
+
+.footer-copywr {
+    flex-grow: 1;
+    max-width: 350px;
+    line-height: 1.3;
+    color: #7e9ec9;
+}
+
+.footer-copywr-name {
+    margin-bottom: 15px;
+    color: #7e9ec9;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.footer-copywr p {
+    margin: 0;
+    margin-bottom: 15px;
+    color: #7e9ec9;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.footer-icons {
+    flex-grow: 1;
+    margin-left: 80px;
+    max-width: 350px;
+}
+.footer-icons p {
+    letter-spacing: 5px;
+    margin: 10px 0 20px 60px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.footer-icons-row {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    flex-shrink: 0;
+}
+/* + выбирает ближайшего соседа слева от элемента */
+.footer-icons-row > * + * {
+    margin-left: 30px;
+}
+
+.footer-contacts {
+    flex-grow: 1;
+    max-width: 350px;
+
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 20.8px */
+    text-transform: uppercase;
+}
+.footer-button {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px 0 30px;
+    margin-left: 80px;
+
+    border: 3px solid #fff;
+    border-radius: 50px;
+
+    line-height: 45px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer-button:hover {
+    color: #1e4776;
+    background-color: white;
+    transition: 300ms;
+}
+.footer-contacts p {
+    margin: 15px 0;
+    color: #7e9ec9;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* --------------------------------------page2------------------------ */
+
+.project {
+    text-align: center;
+    padding: 80px 0 120px;
+}
+.project-header {
+    margin: 0;
+    margin-bottom: 40px;
+    color: #000;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.3; /* 59.8px */
+}
+.poject-image {
+    margin-bottom: 70px;
+}
+.project-description {
+    margin: 0 auto 60px;
+    max-width: 730px;
+}
+.project-description p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; /* 24px */
+}
+
+.project-btn-back {
+    display: inline-block;
+    height: 60px;
+    padding: 0 30px 0 30px;
+
+    border: 3px solid #2f00ff;
+    border-radius: 50px;
+
+    line-height: 55px;
+    text-decoration: none;
+    color: #2f00ff;
+    text-transform: uppercase;
+}
+
+.project-btn-back:hover {
+    background-color: #2f00ff;
+    color: white;
+    box-shadow: inset 0px 10px 5px black;
+    font-size: 13px;
+    line-height: 65px;
+}
